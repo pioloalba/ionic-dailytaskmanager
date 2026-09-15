@@ -39,6 +39,7 @@ jobs:
       - name: Check Android SDK availability
         run: |
           echo "ANDROID_HOME=${ANDROID_HOME}"
+          export PATH="${ANDROID_HOME}/cmdline-tools/latest/bin:${ANDROID_HOME}/platform-tools:${PATH}"
           sdkmanager --version
           adb --version
 
